@@ -1,13 +1,13 @@
-const { merge } = require("webpack-merge");
-const baseWebpackConfig = require("./webpack.base.config");
-const webpack = require("webpack");
+const { merge } = require('webpack-merge');
+const baseWebpackConfig = require('./webpack.base.config');
+const webpack = require('webpack');
 
 const devWebpackConfig = merge(baseWebpackConfig, {
-  mode: "development",
-  devtool: "cheap-module-source-map",
+  mode: 'development',
+  devtool: 'cheap-module-source-map',
   devServer: {
     historyApiFallback: true,
-    static: "./",
+    static: './',
     port: 3000,
     client: {
       overlay: {
@@ -18,7 +18,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
     new webpack.SourceMapDevToolPlugin({
-      filename: "[file].map",
+      filename: '[file].map',
     }),
   ],
 });
