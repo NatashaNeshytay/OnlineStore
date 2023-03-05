@@ -1,5 +1,5 @@
-import { Component } from './core/Component';
-import './components/organisms/Header';
+import { Component } from '../src/core/Component';
+import '../src/components/templates/Header';
 
 class App extends Component {
   render() {
