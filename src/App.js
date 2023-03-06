@@ -4,7 +4,9 @@ import '../src/components/templates/Header';
 class App extends Component {
   render() {
     return `
-      <it-header></it-header>
+      <div class='main-layout'>
+        <it-header></it-header>
+      </div>  
     `;
   }
 }

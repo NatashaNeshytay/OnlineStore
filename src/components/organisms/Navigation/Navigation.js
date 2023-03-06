@@ -5,7 +5,7 @@ import '../../molecules/MenuItems';
 class Navigation extends Component {
   render() {
     return `
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
           <div class="collapse navbar-collapse d-flex justify-content-between">
           <menu-items items='${JSON.stringify(appPages)}'></menu-items>

@@ -1,6 +1,7 @@
 import { Component } from '../../../core/Component';
 import '../../organisms/Navigation';
 import '../../molecules/MenuItems';
+import { appCategories } from '../../../constants/appCategories';
 
 class Header extends Component {
   render() {
@@ -10,7 +11,7 @@ class Header extends Component {
           <nav class="navbar navbar-expand-lg mt-3">
             <div class="container">
               <div class="collapse navbar-collapse d-flex justify-content-between">
-              <menu-items items='${JSON.stringify([])}'></menu-items>
+              <menu-items items='${JSON.stringify([appCategories])}'></menu-items>
     
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
