@@ -1,4 +1,5 @@
 import { appPages } from '../../../constants/appPages';
+import { routes } from '../../../constants/routes';
 import { Component } from '../../../core/Component';
 import '../../molecules/MenuItems';
 
