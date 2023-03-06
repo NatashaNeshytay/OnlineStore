@@ -3,12 +3,20 @@ import { Component } from '../../../core/Component';
 import '../../molecules/MenuItems';
 
 class Navigation extends Component {
+  constructor() {
+    super();
+    const pathname = window.location.pathname;
+    this.activeItem = routes.find((item) => item.href === pathname);
+  }
   render() {
     return `
         <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
           <div class="collapse navbar-collapse d-flex justify-content-between">
-          <menu-items items='${JSON.stringify(appPages)}'></menu-items>
+          <menu-items 
+            items='${JSON.stringify(appPages)}'>
+            active-item='${JSON.stringify(this?.activeItem)}'
+            </menu-items>
 
             <ul class="navbar-nav">
               <li class="nav-item">

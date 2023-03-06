@@ -3,4 +3,5 @@ export const APP_ROUTES = {
   blog: '/blog',
   contacts: '/contacts',
   cart: '/cart',
+  product: './catalog/:id',
 };
