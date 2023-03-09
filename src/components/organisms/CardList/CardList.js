@@ -6,14 +6,14 @@ class CardList extends Component {
     return ['products'];
   }
   render() {
-    const { products } = this.props;
+    const products = JSON.parse(this.props.products);
     return `
         <div class="row">
         ${products.map((item) => {
           return `
             <div class="col-sm-3 mb-3">
                 <it-card
-                    image='${item.image[0]}'
+                    image='${item.images[0]}'
                     title='${item.title}'
                     price='${item.price}'
                     description='${item.description}'
