@@ -1,6 +1,8 @@
-import { Component } from '../src/core/Component';
-import '../src/components/templates/Header';
+import { Component } from './core/Component';
+import { appCategories } from './constants/appCategories';
 import { routes } from './constants/routes';
+import './components/molecules/Footer';
+import './components/templates/Header';
 import './components/pages/BlogPage';
 import './components/pages/CartPage';
 import './components/pages/CatalogPage';
@@ -14,15 +16,15 @@ class App extends Component {
 
     return `
       <div class='main-layout'>
-        <it-header></it-header>
+        <it-header categories='${JSON.stringify(appCategories)}'></it-header>
         <main>
-          <hr class="dropdown-divider" />
-          ${
-            routes.find((route) => route.href === pathname)?.component ??
-            '<error-page></error-page>'
-          }
-        </main>  
-      </div>  
+                  ${
+                    routes.find((route) => route.href === pathname)?.component ??
+                    '<eroor-page></error-page>'
+                  }
+          </main>
+        <it-footer></it-footer>
+      </div>
     `;
   }
 }
